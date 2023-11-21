@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ref-body {
+    background-color: #252525;
+    height: 500vh;
+}
+
+.pi-body {
+    background-color: #252525;
+    height: 500vh;
+}
+
+@font-face {
+    font-family: 'Bosch';
+    src: url(components/Bosch.otf);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(components/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url(components/Proxima-Nova.otf);
+}
+
+@font-face {
+    font-family: 'Crimson Text';
+    src: url(components/Crimson-Text.ttf);
+}
+
+header {
+    padding: 20px 30px;
+    display: flex;
+    align-items: baseline;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 95px;
+    z-index: 99;
+
+}
+
+.nav a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#pi-ordinances {
+    width: 63vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-content h1 {
+    font-family: Bosch;
+    color: white;
+    font-size: 8em;
+    letter-spacing: 0.05em;
+}
+
+.intro-content h2 {
+    margin-top: 2em;
+    color: white;
+    font-family: Proxima Nova;
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: 0.02em;
+}
+
+.resolutions {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-title {
+    display: flex;
+    align-items: baseline;
+}
+
+.sec-title h1 {
+    color: white;
+    font-size: 1.75em;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.sec-title h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7em;
+    color: white;
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+.resolution-content p {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px 0px;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+
+
+
+
+
+
+
+#references {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    display: grid;
+    align-items: center;
+    height: auto;
+    padding-top: calc(25vh - 40px);
+}
+
+.references h1 {
+    color: white;
+    font-size: 40px;
+    font-family: Bosch;
+    letter-spacing: 5px;
+}
+
+.references p {
+    color: white;
+    margin: 40px 0;
+}
