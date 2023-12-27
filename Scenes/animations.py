@@ -582,3 +582,218 @@ class seven_tau_over_eight(Scene):
             (self.radius.get_end()[0], 0, 0),
             color=BLUE
         )
+
+# If cos(alpha) = 5/13, use the tau circle to find the sine and cosine of the following angles
+class original_triangle(Scene):
+    def construct(self):
+
+        axes = Axes(x_range =[-8, 8, 1], y_range=[-8, 8, 1], x_length=7, y_length=7)
+
+        # Triangle
+        triangle = Polygon(axes.c2p(-2.5, -6), axes.c2p(2.5, -6), axes.c2p(2.5, 6)).set_color(WHITE)
+
+        # Right angle
+        ghost_line1 = Line(axes.c2p(0, -6), axes.c2p(2.5, -6)).set_opacity(0)
+        ghost_line2 = Line(axes.c2p(2.5, 0), axes.c2p(2.5, -6)).set_opacity(0)
+        right_angle = RightAngle(ghost_line1, ghost_line2, length=0.25, quadrant=(-1,-1)).set_color(WHITE)
+
+        # Some text
+        cos = MathTex(r"\cos", font_size=40).move_to(axes.c2p(4.5, 3))
+        alpha = MathTex(r"\alpha", font_size=40).next_to(cos, axes.c2p(1, 0))
+        equals = MathTex(r"=", font_size=40).next_to(alpha, axes.c2p(1, 0))
+        divide = Line(axes.c2p(7, 3), axes.c2p(8, 3), color=WHITE)
+        adj_tex = MathTex(r"5", font_size=40).next_to(divide, UP * 0.75)
+        hyp_tex = MathTex(r"13", font_size=40).next_to(divide, DOWN * 0.75)
+        adj = MathTex(r"adj", font_size=40).next_to(divide, UP * 0.75)
+        hyp = MathTex(r"hyp", font_size=40).next_to(divide, DOWN * 0.75)
+
+        # Solving for b
+        pythag_tex = Tex('Pythagorean Theorem:').move_to(np.array([-4, 3, 0]))
+        pythag_theorem = MathTex('a^2 + b^2 = c^2').next_to(pythag_tex, DOWN)
+        pythag_replace = MathTex('b = \sqrt{169 - 25}').next_to(pythag_tex, DOWN)
+        b_equals = MathTex('b=12').next_to(pythag_tex, DOWN)
+        opp = MathTex('12', font_size=40).move_to(axes.c2p(3.75, 0))
+
+        # Cosine and sine of alpha
+        cosine = MathTex(r"\cos{\alpha}=\frac{5}{13}").move_to(np.array([-4, 2, 0]))
+        sine = MathTex(r"\sin{\alpha}=\frac{12}{13}").move_to(np.array([-4, -2, 0]))
+
+        # Animations
+        self.play(Create(triangle), run_time=1)
+        self.play(GrowFromPoint(right_angle, axes.c2p(2.5, -6)))
+        self.play(Write(cos), Write(alpha), Write(equals), GrowFromPoint(divide, axes.c2p(7, 3)), Write(adj), Write(hyp))
+        self.play(Transform(adj, adj_tex), Transform(hyp, hyp_tex))
+        self.play(alpha.animate.move_to(axes.c2p(-1.5, -5.25)))
+        self.play(adj.animate.move_to(axes.c2p(0, -7)), hyp.animate.move_to(axes.c2p(-1, 1)), Unwrite(cos), Unwrite(equals), Unwrite(divide))
+        self.play(Write(pythag_tex), run_time=1)
+        self.play(Write(pythag_theorem))
+        self.wait(0.5)
+        self.play(ReplacementTransform(pythag_theorem, pythag_replace))
+        self.wait(0.5)
+        self.play(ReplacementTransform(pythag_replace, b_equals))
+        self.wait(0.5)
+        self.play(Unwrite(pythag_tex), ReplacementTransform(b_equals, opp))
+        self.play(Write(cosine), Write(sine))
+        self.wait(2.5)
+
+
+class three_sin_x(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[-TAU, TAU, TAU/4],
+            y_range=[-3, 3, 1],
+            x_length=10,
+            y_axis_config={"include_numbers": True, "font_size": 30},
+            tips=False
+        )
+        
+        function_draft = axes.plot(lambda x: np.sin(x), color=BLUE)
+        function = axes.plot(lambda x: 3 * np.sin(x), color=BLUE)
+        function_tex = MathTex(r"f(x)=3\sin\left(x\right)", font_size=40, color=BLUE).move_to(np.array([-4, -2, 0]))
+
+        self.add(axes)
+        self.add_x_labels()
+        self.play(Write(function_tex))
+        self.play(Create(function_draft), run_time=5)
+        self.play(Transform(function_draft, function))
+        self.wait()
+
+    def add_x_labels(self):
+        x_labels = [
+            MathTex(r"-\tau", font_size=40), MathTex(r"-\frac{\tau}{2}", font_size=30), MathTex(r"0", font_size=40),
+            MathTex(r"\frac{\tau}{2}", font_size=30), MathTex(r"\tau", font_size=40),
+        ]
+
+        for i in range(len(x_labels)):
+            x_labels[i].next_to(np.array([-4.75 + 2.5*i, 0, 0]), DOWN)
+            self.add(x_labels[i])
+
+
+class sin_three_x(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[-TAU/3, TAU/3, TAU/12],
+            y_range=[-1, 1, 0.5],
+            x_length=10,
+            y_length=5,
+            y_axis_config={"include_numbers": True, "font_size": 30},
+            tips=False
+        )
+        
+        function = axes.plot(lambda x: np.sin(3 * x), color=RED)
+        function_tex = MathTex(r"f(x)=\sin\left(3x\right)", font_size=40, color=RED).move_to(np.array([-4, -2, 0]))
+
+        self.add(axes)
+        self.add_x_labels()
+        self.play(Write(function_tex))
+        self.play(Create(function), run_time=5)
+        self.wait()
+
+    def add_x_labels(self):
+        x_labels = [
+            MathTex(r"-\frac{\tau}{3}", font_size=30), MathTex(r"-\frac{\tau}{6}", font_size=30), MathTex(r"0", font_size=40),
+            MathTex(r"\frac{\tau}{6}", font_size=30), MathTex(r"\frac{\tau}{3}", font_size=30),
+        ]
+
+        for i in range(len(x_labels)):
+            x_labels[i].next_to(np.array([-4.75 + 2.5*i, 0, 0]), DOWN)
+            self.add(x_labels[i])
+
+
+class negative_two_cos_x(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[-TAU, TAU, TAU/4],
+            y_range=[-2, 2, 1],
+            x_length=10,
+            y_axis_config={"include_numbers": True, "font_size": 30},
+            tips=False
+        )
+        
+        function_draft1 = axes.plot(lambda x: np.cos(x), color=GREEN)
+        function_draft2 = axes.plot(lambda x: 2 * np.cos(x), color=GREEN)
+        function = axes.plot(lambda x: -2 * np.cos(x), color=GREEN)
+        function_tex = MathTex(r"f(x)=-2\cos\left(x\right)", font_size=40, color=GREEN).move_to(np.array([-5, 3, 0]))
+
+        self.add(axes)
+        self.add_x_labels()
+        self.play(Write(function_tex))
+        self.play(Create(function_draft1), run_time=5)
+        self.play(ReplacementTransform(function_draft1, function_draft2))
+        self.play(ReplacementTransform(function_draft2, function))
+        self.wait()
+
+    def add_x_labels(self):
+        x_labels = [
+            MathTex(r"-\tau", font_size=40), MathTex(r"-\frac{\tau}{2}", font_size=30), MathTex(r"0", font_size=40),
+            MathTex(r"\frac{\tau}{2}", font_size=30), MathTex(r"\tau", font_size=40),
+        ]
+
+        for i in range(len(x_labels)):
+            x_labels[i].next_to(np.array([-4.75 + 2.5*i, 0, 0]), DOWN)
+            self.add(x_labels[i])
+
+
+class cos_x_minus_tau_over_four(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[-TAU, TAU, TAU/4],
+            y_range=[-1, 1, 0.5],
+            x_length=10,
+            y_length=5,
+            y_axis_config={"include_numbers": True, "font_size": 30},
+            tips=False
+        )
+        
+        function_draft = axes.plot(lambda x: np.cos(x), color=BLUE)
+        function = axes.plot(lambda x: np.cos(x - TAU/4), color=BLUE)
+        function_tex = MathTex(r"f(x)=\cos\left(x-\frac{\tau}{4}\right)", font_size=40, color=BLUE).move_to(np.array([-3.5, 3, 0]))
+
+        self.add(axes)
+        self.add_x_labels()
+        self.play(Write(function_tex))
+        self.play(Create(function_draft), run_time=5)
+        self.play(Transform(function_draft, function))
+        self.wait()
+
+    def add_x_labels(self):
+        x_labels = [
+            MathTex(r"-\tau", font_size=40), MathTex(r"-\frac{\tau}{2}", font_size=30), MathTex(r"0", font_size=40),
+            MathTex(r"\frac{\tau}{2}", font_size=30), MathTex(r"\tau", font_size=40),
+        ]
+
+        for i in range(len(x_labels)):
+            x_labels[i].next_to(np.array([-4.75 + 2.5*i, 0, 0]), DOWN)
+            self.add(x_labels[i])
+
+class sin_two_x_minus_tau_over_two(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[-TAU, TAU, TAU/4],
+            y_range=[-1, 1, 0.5],
+            x_length=10,
+            y_length=5,
+            y_axis_config={"include_numbers": True, "font_size": 30},
+            tips=False
+        )
+        
+        function_draft = axes.plot(lambda x: np.cos(x), color=BLUE)
+        function = axes.plot(lambda x: np.cos(x - TAU/4), color=BLUE)
+        function_tex = MathTex(r"f(x)=\cos\left(x-\frac{\tau}{4}\right)", font_size=40, color=BLUE).move_to(np.array([-3.5, 3, 0]))
+
+        self.add(axes)
+        self.add_x_labels()
+        self.play(Write(function_tex))
+        self.play(Create(function_draft), run_time=5)
+        self.play(Transform(function_draft, function))
+        self.wait()
+
+    def add_x_labels(self):
+        x_labels = [
+            MathTex(r"-\tau", font_size=40), MathTex(r"-\frac{\tau}{2}", font_size=30), MathTex(r"0", font_size=40),
+            MathTex(r"\frac{\tau}{2}", font_size=30), MathTex(r"\tau", font_size=40),
+        ]
+
+        for i in range(len(x_labels)):
+            x_labels[i].next_to(np.array([-4.75 + 2.5*i, 0, 0]), DOWN)
+            self.add(x_labels[i])
