@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/3977891868_128713956_2111772413.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/2852726489_452989763_341422347.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/2852726489_2244211981_170550928.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/2852726489_2395028742_571743299.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/2852726489_291954120_2528946982.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_eight/2852726489_1704852926_3862239552.mp4'
