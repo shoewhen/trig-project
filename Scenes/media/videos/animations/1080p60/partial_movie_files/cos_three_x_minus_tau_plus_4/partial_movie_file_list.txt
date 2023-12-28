@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/3977891868_1874201468_808442392.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_969901715_3086082139.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_42267440_773925773.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1843006092_4052525107.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1704852926_2105711785.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_2833748356_3859050140.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_3794325701_1873340818.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1704852926_142421118.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1471182014_792666379.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_197652700_1495348365.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1120349775_3114157686.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/cos_three_x_minus_tau_plus_4/2852726489_1704852926_1599816978.mp4'
