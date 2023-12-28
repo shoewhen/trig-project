@@ -33,19 +33,30 @@
             </p>
             <div class="tau-pi-defs">
                 <p>Pi is the ratio of a circle’s circumference to its diameter, represented by the greek letter π</p>
-                <p>Tau is the ratio of a circle’s circumference to its radius, represented by the greek letter τ</p>
+                <p>Tau is the ratio of a circle’s circumference to its radius, represented by the greek letter τ. Tau can be thought of as "two Pi."</p>
             </div>
-            <p>Additionally, Tau is often said to just be "two Pi," as in "Pi times two."</p>
+            <p>
+                In order to make this project a little more interesting, I decided to create a webpage with some Manim animations to aid in my explanations of the questions presented. I haven’t programmed in Python in a while, and I’ve also never used Manim before, so this will certainly be an endeavoring journey. But that’s okay, because it’s all for the grade anyways (satire).
+            </p>
 
             <h1>The Tau Unit Circle</h1>
-            <p>There isn't anythinig super special about this. It's just a unit circle but instead of using π 
-                I just used τ. Also this was hell to code cuz it was the first time I've ever tried Manim 
-                and I wanted to kill myself.</p>
+            <p>There isn't anything super special about this. It's just a unit circle but instead of using π I just converted every angle to τ. This can be done pretty easily by just dividing each angle of a π unit circle by two and then changing the π sign to a τ sign.</p>
             <video autoplay loop controls="false" class="clip">
                 <source src="Scenes/media/videos/animations/1080p60/unit_circle.mp4" type="video/mp4">
             </video>
-            <h2>Tau over Eight</h2>
-            <p></p>
+            <h2>\(\sin{\tau \over 8}\) and \(\cos{\tau \over 8}\)</h2>
+            <p>
+                \(\tau \over8\) is also equivalent to \(\pi \over 4\) or 45°. Using the unit circle, you can 
+                easily find the values of \(\sin{\tau \over 8}\) and \(\cos{\tau \over 8}\). Since cosine 
+                and sine can be redefined as the x and y distance from the origin to a point on the unit 
+                circle, you just need to find the terminal point when you rotate \(\tau \over8\) radians 
+                counterclockwise around the unit circle. The x-coordinate of the terminal point will be the 
+                value of \(\cos{\tau \over 8}\), and the y-coordinate will be the value of \(\sin{\tau \over 8}\). 
+                I’ve created an animation below to help visualize what this would look like on the unit circle.
+            </p>
+            <video autoplay loop controls="false" class="clip">
+                <source src="Scenes/media/videos/animations/1080p60/tau_over_eight.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
     
