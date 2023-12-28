@@ -34,6 +34,15 @@
     src: url(components/Crimson-Text.ttf);
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+
 header {
     padding: 20px 30px;
     display: flex;
@@ -43,7 +52,6 @@ header {
     width: 100%;
     max-height: 95px;
     z-index: 99;
-
 }
 
 .nav a {
@@ -59,6 +67,58 @@ header {
     font-size: 20px;
     letter-spacing: 3px;
 }
+
+
+
+
+
+
+#project {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: calc(25vh - 40px);
+}
+
+.work h1 {
+    color: white;
+    font-size: 40px;
+    font-family: Bosch;
+    letter-spacing: 5px;
+    padding-top: 30px;
+}
+
+.work h2 {
+    margin-top: 60px;
+    color: white;
+    font-size: 30px;
+    font-family: Bosch;
+    letter-spacing: 3px;
+}
+
+.work p {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px 0px;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.tau-pi-defs {
+    margin-left: 50px;
+}
+
+.clip {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 40px; */
+}
+
+
+
+
+
 
 #pi-ordinances {
     width: 63vw;
