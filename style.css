@@ -36,12 +36,12 @@
 
 ::-webkit-scrollbar {
     width: 8px;
-  }
+}
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgb(255, 255, 255); 
     border-radius: 10px;
-  }
+}
 
 header {
     padding: 20px 30px;
@@ -210,4 +210,13 @@ header {
 .references p {
     color: white;
     margin: 40px 0;
+}
+
+
+
+
+
+
+#block {
+    height: 25vh;
 }
