@@ -151,7 +151,8 @@ class tau_over_eight(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{8}", font_size=40).move_to(axes.c2p(np.sqrt(2)/2, np.sqrt(2)/2)).shift(axes.c2p(0.3, 0))
+        self.c_tex = c_tex = MathTex(r"\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)", color=WHITE, font_size=40).move_to(axes.c2p(np.sqrt(2)/2, np.sqrt(2)/2)).shift(axes.c2p(0.4, 0.2))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{8}", font_size=35).move_to(np.array([-5, 2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{\tau}{8}\right)=\frac{\sqrt{2}}{2}", font_size=40, color=BLUE).move_to(np.array([4, -2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{\tau}{8}\right)=\frac{\sqrt{2}}{2}", font_size=40, color=RED).move_to(np.array([-4, -2.5, 0]))
  
@@ -168,6 +169,7 @@ class tau_over_eight(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -176,11 +178,9 @@ class tau_over_eight(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
@@ -225,7 +225,8 @@ class tau_over_six(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{6}", font_size=40).move_to(axes.c2p(np.sqrt(1)/2, np.sqrt(3)/2)).shift(axes.c2p(0.3, 0))
+        self.c_tex = c_tex = MathTex(r"\left(\frac{1}{2}, \frac{\sqrt{3}}{2}\right)", color=WHITE, font_size=40).move_to(axes.c2p(np.sqrt(1)/2, np.sqrt(3)/2)).shift(axes.c2p(0.4, 0.2))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{6}", font_size=40).move_to(np.array([-5, 2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{\tau}{6}\right)=\frac{\sqrt{3}}{2}", font_size=40, color=BLUE).move_to(np.array([4, -2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{\tau}{6}\right)=\frac{1}{2}", font_size=40, color=RED).move_to(np.array([-4, -2.5, 0]))
  
@@ -242,6 +243,7 @@ class tau_over_six(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -250,11 +252,9 @@ class tau_over_six(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
@@ -299,7 +299,8 @@ class tau_over_four(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{4}", font_size=40).move_to(axes.c2p(np.sqrt(0)/2, np.sqrt(4)/2)).shift(axes.c2p(0.3, 0.15))
+        self.c_text = c_tex = MathTex(r"\left(0, 1)", font_size=40).move_to(axes.c2p(np.sqrt(0)/2, np.sqrt(4)/2)).shift(axes.c2p(0.3, 0.15))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{4}", font_size=40).move_to(np.array([-5, 2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{\tau}{4}\right)=1", font_size=40, color=BLUE).move_to(np.array([4, -2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{\tau}{4}\right)=0", font_size=40, color=RED).move_to(np.array([-4, -2.5, 0]))
  
@@ -316,6 +317,7 @@ class tau_over_four(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -324,11 +326,9 @@ class tau_over_four(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
@@ -373,7 +373,8 @@ class tau_over_three(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{3}", font_size=40).move_to(axes.c2p(-np.sqrt(1)/2, np.sqrt(3)/2)).shift(axes.c2p(-0.45, 0))
+        self.c_tex = c_tex = MathTex(r"\left(-\frac{1}{2}, \frac{\sqrt{3}}{2}\right)", color=WHITE, font_size=40).move_to(axes.c2p(-np.sqrt(1)/2, np.sqrt(3)/2)).shift(axes.c2p(-0.45, 0.2))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{3}", font_size=40).move_to(np.array([5, 2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{\tau}{3}\right)=\frac{\sqrt{3}}{2}", font_size=40, color=BLUE).move_to(np.array([4, -2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{\tau}{3}\right)=-\frac{1}{2}", font_size=40, color=RED).move_to(np.array([-4, -2.5, 0]))
  
@@ -390,6 +391,7 @@ class tau_over_three(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -398,11 +400,9 @@ class tau_over_three(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
@@ -447,7 +447,8 @@ class tau_over_two(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{2}", font_size=40).move_to(axes.c2p(-np.sqrt(4)/2, np.sqrt(0)/2)).shift(axes.c2p(-0.55, 0))
+        self.c_tex = c_tex = MathTex(r"\left(-1, 0\right)", color=WHITE, font_size=40).move_to(axes.c2p(-np.sqrt(4)/2, np.sqrt(0)/2)).shift(axes.c2p(-0.55, 0))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{\tau}{2}", font_size=40).move_to(np.array([5, 2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{\tau}{2}\right)=0", font_size=40, color=BLUE).move_to(np.array([4, -2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{\tau}{2}\right)=-1", font_size=40, color=RED).move_to(np.array([-4, -2.5, 0]))
  
@@ -464,6 +465,7 @@ class tau_over_two(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -472,11 +474,9 @@ class tau_over_two(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
@@ -520,7 +520,8 @@ class seven_tau_over_eight(Scene):
         self.point = point = self.get_point()
         self.h = h = self.get_h()
         self.v = v = self.get_v()
-        self.angle_text = angle_tex = MathTex(r"\theta=\frac{7\tau}{8}", font_size=40).move_to(axes.c2p(np.sqrt(2)/2, -np.sqrt(2)/2)).shift(axes.c2p(0.4, 0))
+        self.c_tex = c_tex = MathTex(r"\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)", color=WHITE, font_size=40).move_to(axes.c2p(np.sqrt(2)/2, -np.sqrt(2)/2)).shift(axes.c2p(0.45, -0.2))
+        self.angle_text = angle_tex = MathTex(r"\theta=\frac{7\tau}{8}", font_size=40).move_to(np.array([-5, -2.5, 0]))
         self.sin_tex = sin_tex = MathTex(r"sin\left(\frac{7\tau}{8}\right)=-\frac{\sqrt{2}}{2}", font_size=40, color=BLUE).move_to(np.array([4, 2.5, 0]))
         self.cos_tex = cos_tex = MathTex(r"cos\left(\frac{7\tau}{8}\right)=\frac{\sqrt{2}}{2}", font_size=40, color=RED).move_to(np.array([-4, 2.5, 0]))
  
@@ -537,6 +538,7 @@ class seven_tau_over_eight(Scene):
  
         self.add(axes, angle)
         self.play(Create(circle), run_time=1)
+        self.play(Write(angle_tex))
         self.play(GrowFromPoint(radius, ORIGIN))
         self.play(
             UpdateFromAlphaFunc(
@@ -545,11 +547,9 @@ class seven_tau_over_eight(Scene):
                 rate_func=linear,
             ),
         )
-        self.play(Write(angle_tex))
+        self.play(Write(c_tex))
         self.play(Write(sin_tex), Write(cos_tex))
         self.wait()
-
-    
 
     def get_radius(self,theta=0):
         return Line(
