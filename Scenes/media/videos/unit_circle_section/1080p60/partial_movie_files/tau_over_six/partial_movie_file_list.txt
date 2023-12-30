@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/3977891868_128713956_2111772413.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_1198284920_441226940.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_452989763_732722468.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_1517270464_1409020414.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_277914459_1180071523.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_3508651804_456083569.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/unit_circle_section/1080p60/partial_movie_files/tau_over_six/2852726489_1704852926_629979801.mp4'

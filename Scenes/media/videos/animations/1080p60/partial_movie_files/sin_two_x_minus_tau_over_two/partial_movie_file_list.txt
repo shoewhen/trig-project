@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/3977891868_385850478_1559723670.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_3141239498_569206469.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_1025872893_4117299693.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_1135482361_1677943396.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_2413344171_3752161307.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_361698614_2459210245.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_2336830143_2065454822.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_two_x_minus_tau_over_two/2852726489_1704852926_3115762841.mp4'

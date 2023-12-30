@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/3977891868_128713956_2111772413.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_1908819675_441226940.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_452989763_2184476579.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_4185309657_2158975253.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_3045813078_3957291563.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_3989504112_1902538644.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/tau_over_four/2852726489_1704852926_689242427.mp4'

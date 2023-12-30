@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/graphing_section/1080p60/partial_movie_files/cos_x_minus_tau_over_four/3977891868_121084739_1559723670.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/graphing_section/1080p60/partial_movie_files/cos_x_minus_tau_over_four/2852726489_2319480309_1117748539.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/graphing_section/1080p60/partial_movie_files/cos_x_minus_tau_over_four/2852726489_1372575039_2462771889.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/graphing_section/1080p60/partial_movie_files/cos_x_minus_tau_over_four/2852726489_2205831676_2176374768.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/graphing_section/1080p60/partial_movie_files/cos_x_minus_tau_over_four/2852726489_1704852926_269457506.mp4'

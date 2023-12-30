@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/3977891868_2130525693_2708026668.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_33204660_3463965067.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_2579127995_145995743.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_568141630_3019830154.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_674837482_10293929.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_1091193361_559101701.mp4'
-file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/negative_two_cos_x/2852726489_1704852926_1704490129.mp4'
