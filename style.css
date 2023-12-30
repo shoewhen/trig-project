@@ -132,9 +132,30 @@ header {
     padding-top: 0px;
 }
 
+.centered-angles {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.centered-angles p {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
 .theta-shifts h2 {
     font-family: Proxima Nova;
     letter-spacing: 3px;
+}
+
+.centered-functions {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+}
+
+.centered-functions p {
+    font-size: 20px;
 }
 
 

@@ -637,6 +637,68 @@ class original_triangle(Scene):
         self.wait(2.5)
 
 
+class sin_equals_one_half(Scene):
+    def construct(self):
+        axes_right = Axes(x_range =[-1.25, 1.25, 0.25], y_range=[-1.25, 1.25, 0.25], x_length=7, y_length=7, axis_config={"include_tip": False, "font_size": 20})
+        axes_left = axes_right.copy()
+        axes = VGroup(axes_left, axes_right).arrange(RIGHT, buff=2).scale_to_fit_width(12)
+        self.add(axes)
+
+        circle_right = Circle.from_three_points(axes_right.c2p(-1, 0), axes_right.c2p(1, 0), axes_right.c2p(0, 1), color=WHITE)
+        circle_left = Circle.from_three_points(axes_left.c2p(-1, 0), axes_left.c2p(1, 0), axes_left.c2p(0, 1), color=WHITE)
+
+        self.play(Create(circle_right), Create(circle_left), run_time=1)
+        
+        rotation_center = axes_right.c2p(0, 0)
+        theta_tracker = ValueTracker(0.01)
+        line1 = Line(axes_right.c2p(0,0), axes_right.c2p(1,0))
+        line_moving = Line(axes_right.c2p(0,0), axes_right.c2p(1,0))
+        line_ref = line_moving.copy()
+        line_moving.rotate(
+            theta_tracker.get_value() * DEGREES, about_point=rotation_center
+        )
+
+        # self.add(a)
+        # self.play(GrowFromPoint(line1, axes_right.c2p(0,0)), GrowFromPoint(line_moving, axes_right.c2p(0,0)))
+
+        
+
+
+
+        rotation_center_left = axes_left.c2p(0, 0)
+        theta_tracker_left = ValueTracker(0.01)
+        line1_left = Line(axes_left.c2p(0,0), axes_left.c2p(1,0))
+        line_moving_left = Line(axes_left.c2p(0,0), axes_left.c2p(1,0))
+        line_ref_left = line_moving_left.copy()
+        line_moving_left.rotate(
+            theta_tracker_left.get_value() * DEGREES, about_point=rotation_center_left
+        )
+
+        # self.play()
+        self.play(GrowFromPoint(line1, axes_right.c2p(0,0)), GrowFromPoint(line_moving, axes_right.c2p(0,0)), GrowFromPoint(line1_left, axes_left.c2p(0,0)), GrowFromPoint(line_moving_left, axes_left.c2p(0,0)))
+
+
+
+        line_moving.add_updater(
+            lambda x: x.become(line_ref.copy()).rotate(
+                theta_tracker.get_value() * DEGREES, about_point=rotation_center
+            )
+        )
+
+        line_moving_left.add_updater(
+            lambda x: x.become(line_ref_left.copy()).rotate(
+                theta_tracker_left.get_value() * DEGREES, about_point=rotation_center_left
+            )
+        )
+
+
+        self.play(theta_tracker.animate.set_value(29.9), theta_tracker_left.animate.set_value(149.9))
+        self.wait()
+        self.play(theta_tracker.animate.set_value(389.9), theta_tracker_left.animate.set_value(509.9))
+        self.wait()
+        # self.play(theta_tracker.animate.increment_value(120))
+
+
 class three_sin_x(Scene):
     def construct(self):
         axes = Axes(
@@ -649,7 +711,7 @@ class three_sin_x(Scene):
         
         function_draft = axes.plot(lambda x: np.sin(x), color=BLUE)
         function = axes.plot(lambda x: 3 * np.sin(x), color=BLUE)
-        function_tex1 = MathTex(r"f(x)=\sin{x}", font_size=40, color=BLUE).move_to(np.array([-4, -2, 0]))
+        function_tex1 = MathTex(r"f(x)=\sin\left(x\right)", font_size=40, color=BLUE).move_to(np.array([-4, -2, 0]))
         function_tex = MathTex(r"f(x)=3\sin\left(x\right)", font_size=40, color=BLUE).move_to(np.array([-4, -2, 0]))
 
         self.add(axes)
@@ -684,7 +746,7 @@ class sin_three_x(Scene):
         
         function_draft = axes.plot(lambda x: np.sin(x), color=RED)
         function = axes.plot(lambda x: np.sin(3 * x), color=RED)
-        function_tex1 = MathTex(r"f(x)=\sin{x}", font_size=40, color=RED).move_to(np.array([-5, 3.25, 0]))
+        function_tex1 = MathTex(r"f(x)=\sin\left(x\right)", font_size=40, color=RED).move_to(np.array([-5, 3.25, 0]))
         function_tex = MathTex(r"f(x)=\sin\left(3x\right)", font_size=40, color=RED).move_to(np.array([-5, 3.25, 0]))
 
         self.add(axes)
@@ -719,8 +781,8 @@ class negative_two_cos_x(Scene):
         function_draft1 = axes.plot(lambda x: np.cos(x), color=GREEN)
         function_draft2 = axes.plot(lambda x: 2 * np.cos(x), color=GREEN)
         function = axes.plot(lambda x: -2 * np.cos(x), color=GREEN)
-        function_tex1 = MathTex(r"f(x)=\cos{x}", font_size=30, color=GREEN).move_to(np.array([-5, 3.25, 0]))
-        function_tex2 = MathTex(r"f(x)=2\cos{x}", font_size=30, color=GREEN).move_to(np.array([-5, 3.25, 0]))
+        function_tex1 = MathTex(r"f(x)=\cos\left(x\right)", font_size=30, color=GREEN).move_to(np.array([-5, 3.25, 0]))
+        function_tex2 = MathTex(r"f(x)=2\cos\left(x\right)", font_size=30, color=GREEN).move_to(np.array([-5, 3.25, 0]))
         function_tex = MathTex(r"f(x)=-2\cos\left(x\right)", font_size=30, color=GREEN).move_to(np.array([-5, 3.25, 0]))
 
         self.add(axes)
@@ -757,7 +819,7 @@ class cos_x_minus_tau_over_four(Scene):
         
         function_draft = axes.plot(lambda x: np.cos(x), color=BLUE)
         function = axes.plot(lambda x: np.cos(x - TAU/4), color=BLUE)
-        function_tex1 = MathTex(r"f(x)=\cos{x}", font_size=40, color=BLUE).move_to(np.array([-5, 3.25, 0]))
+        function_tex1 = MathTex(r"f(x)=\cos\left(x\right)", font_size=40, color=BLUE).move_to(np.array([-5, 3.25, 0]))
         function_tex = MathTex(r"f(x)=\cos\left(x-\frac{\tau}{4}\right)", font_size=40, color=BLUE).move_to(np.array([-5, 3.25, 0]))
 
         self.add(axes)
@@ -793,7 +855,7 @@ class sin_two_x_minus_tau_over_two(Scene):
         function_draft1 = axes.plot(lambda x: np.sin(x), color=RED)
         function_draft2 = axes.plot(lambda x: np.sin(x - TAU / 4), color=RED)
         function = axes.plot(lambda x: np.sin(2 * x - TAU / 2), color=RED)
-        function_tex1 = MathTex(r"f(x)=\sin{x}", font_size=30, color=RED).move_to(np.array([-5, 3.25, 0]))
+        function_tex1 = MathTex(r"f(x)=\sin\left(x\right)", font_size=30, color=RED).move_to(np.array([-5, 3.25, 0]))
         function_tex2 = MathTex(r"f(x)=\sin\left(x-\frac{\tau}{4}\right)", font_size=30, color=RED).move_to(np.array([-5, 3.25, 0]))
         function_tex = MathTex(r"f(x)=\sin\left(2\left(x-\frac{\tau}{4}\right)\right)", font_size=30, color=RED).move_to(np.array([-5, 3.25, 0]))
         dist_tex = MathTex(r"f(x)=\sin\left(2x-\frac{\tau}{2}\right)", font_size=30, color=RED).move_to(np.array([-5, 3.25, 0]))
@@ -834,8 +896,8 @@ class cos_three_x_minus_tau_plus_4(Scene):
         function_draft2 = axes.plot(lambda x: np.cos(x) + 4, color=GREEN)
         function_draft3 = axes.plot(lambda x: np.cos(x - TAU/3) + 4, color=GREEN)
         function = axes.plot(lambda x: np.cos(3 * x - TAU) + 4, color=GREEN)
-        function_tex1 = MathTex(r"f(x)=\cos{x}", font_size=40, color=GREEN).move_to(np.array([-5, 3.25, 0]))
-        function_tex2 = MathTex(r"f(x)=\cos{x} + 4", font_size=40, color=GREEN).move_to(np.array([-5, 3.25, 0]))
+        function_tex1 = MathTex(r"f(x)=\cos\left(x\right)", font_size=40, color=GREEN).move_to(np.array([-5, 3.25, 0]))
+        function_tex2 = MathTex(r"f(x)=\cos\left(x\right) + 4", font_size=40, color=GREEN).move_to(np.array([-5, 3.25, 0]))
         function_tex3 = MathTex(r"f(x)=\cos\left(x-\frac{\tau}{3}\right)+4", font_size=40, color=GREEN).move_to(np.array([-4.5, 3.25, 0]))
         function_tex4 = MathTex(r"f(x)=\cos\left(3\left(x-\frac{\tau}{3}\right)\right)+4", font_size=40, color=GREEN).move_to(np.array([-4.2, 3.25, 0]))
         function_tex = MathTex(r"f(x)=\cos\left(3x-\tau\right)+4", font_size=40, color=GREEN).move_to(np.array([-4.5, 3.25, 0]))

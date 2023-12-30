@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/3977891868_1171711566_3425809888.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/2852726489_3118110687_427246308.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/2852726489_2231246848_3771736774.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/2852726489_1704852926_3035105349.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/2852726489_1707581295_1048637754.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/animations/1080p60/partial_movie_files/sin_equals_one_half/2852726489_1704852926_3458385906.mp4'
