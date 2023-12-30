@@ -174,22 +174,23 @@ header {
 
 
 #pi-ordinances {
-    width: 63vw;
     margin-left: auto;
     margin-right: auto;
 }
 
 .intro {
     height: 100vh;
-    display: grid;
+    display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .intro-content h1 {
     font-family: Bosch;
     color: white;
-    font-size: 8em;
+    font-size: calc(75px + 2vw);
+    /* font-size: 6.82vw; */
     letter-spacing: 0.05em;
 }
 
@@ -198,14 +199,17 @@ header {
     color: white;
     font-family: Proxima Nova;
     font-weight: 400;
-    font-size: 1.4em;
+    /* font-size: 1.4vw; */
+    font-size: calc(16px + 0.5vw);
     letter-spacing: 0.02em;
 }
 
 .resolutions {
-    width: 40vw;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .sec-title {
