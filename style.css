@@ -45,6 +45,7 @@
 
 header {
     padding: 20px 30px;
+    background-color: #252525;
     display: flex;
     align-items: baseline;
     position: fixed;
@@ -74,9 +75,11 @@ header {
 
 
 #project {
-    width: 40vw;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
     /* padding-top: calc(25vh - 40px); */
 }
 
@@ -122,10 +125,8 @@ header {
 }
 
 .clip {
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-top: 40px; */
+    height: 100%;
+    width: 100%;
 }
 
 .unit-circle h1 {
@@ -134,8 +135,7 @@ header {
 
 .centered-angles {
     display: flex;
-    justify-content: center;
-    gap: 64px;
+    justify-content: space-evenly;
 }
 
 .centered-angles p {
@@ -148,10 +148,20 @@ header {
     letter-spacing: 3px;
 }
 
+.centered-equations {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.centered-equations p{
+    font-size: 28px;
+}
+
 .centered-functions {
     display: flex;
-    gap: 75px;
-    justify-content: center;
+    justify-content: space-evenly;
+    max-width: 750px;
 }
 
 .centered-functions p {
