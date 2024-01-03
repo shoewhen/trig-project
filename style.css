@@ -30,8 +30,8 @@
 }
 
 @font-face {
-    font-family: 'Crimson Text';
-    src: url(components/Crimson-Text.ttf);
+    font-family: 'Lust';
+    src: url(components/lust-regular.otf);
 }
 
 ::-webkit-scrollbar {
@@ -43,31 +43,79 @@
     border-radius: 10px;
 }
 
-header {
+nav ul {
     padding: 20px 30px;
-    background-color: #252525;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     position: fixed;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
-    max-height: 95px;
     z-index: 99;
+    background-color: #252525;
 }
 
-.nav a {
-    margin-left: 50px;
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 3px;
+    z-index: 1000;
+    padding: 20px 30px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    height: 100%;
+    display: flex;
+    padding-left: 50px;
     text-decoration: none;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.logo {
-    color: white;
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 3px;
+.menu-button {
+    display: none;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: fit-content;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: #ffffff16;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    /* transform: translateX(100%);
+    transition: transform 350ms ease-in; */
+}
+
+.sidebar a {
+    padding: 10px 5px;
+}
+
+@media (max-width: 590px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+
+    
+}
+
 
 
 
@@ -75,12 +123,38 @@ header {
 
 
 #project {
-    max-width: 800px;
+    max-width: 41em;
     margin-left: auto;
     margin-right: auto;
     padding-left: 25px;
     padding-right: 25px;
-    /* padding-top: calc(25vh - 40px); */
+    width: unset;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    #title-page h1, #title-page h1.title {
+        font-size: 14vw;
+    }
+}
+
+#title-page {
+    padding-top: calc(50vh - 8em);
+}
+
+#title-page h1{
+    font-family: Lust;
+    line-height: 1;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 100;
+    color: white;
+}
+
+#title-page h2 {
+    font-family: Proxima Nova;
+    margin-top: 1em;
+    text-align: center;
 }
 
 .work h1 {
@@ -109,14 +183,13 @@ header {
     line-height: 1.75;
 }
 
-.introduction {
-    height: 100vh;
+#introduction {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.introduction h1 {
+#introduction h1 {
     padding-top: 0;
 }
 
@@ -170,15 +243,19 @@ header {
 
 
 
-
-
+@media only screen and (max-width: 800px) {
+    #intro h1, #intro h1.title {
+        font-size: 14vw;
+    }
+}
 
 #pi-ordinances {
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7;
 }
 
-.intro {
+#intro {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -187,29 +264,28 @@ header {
 }
 
 .intro-content h1 {
-    font-family: Bosch;
+    font-family: Lust;
     color: white;
-    font-size: calc(75px + 2vw);
-    /* font-size: 6.82vw; */
+    font-size: 4em;
+    font-weight: 400;
     letter-spacing: 0.05em;
 }
 
 .intro-content h2 {
-    margin-top: 2em;
+    margin-top: 1em;
     color: white;
     font-family: Proxima Nova;
     font-weight: 400;
-    /* font-size: 1.4vw; */
-    font-size: calc(16px + 0.5vw);
+    font-size: 1.5em;
     letter-spacing: 0.02em;
 }
 
 .resolutions {
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 25px;
     padding-right: 25px;
+    max-width: 41em;
 }
 
 .sec-title {
@@ -250,18 +326,20 @@ header {
 #references {
     margin-left: auto;
     margin-right: auto;
-    width: 40vw;
-    display: grid;
-    align-items: center;
+    max-width: 41em;
+    display: flex;
     height: auto;
     padding-top: calc(25vh - 40px);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .references h1 {
     color: white;
     font-size: 40px;
-    font-family: Bosch;
-    letter-spacing: 5px;
+    font-family: Lust;
+    letter-spacing: 2px;
+    font-weight: 100;
 }
 
 .references p {

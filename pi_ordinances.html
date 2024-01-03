@@ -9,19 +9,38 @@
 </head>
 <body class="pi-body">
     
-    <header>
-        <h1 class="logo">π</h1>
-        <div class="nav">
-            <a href="./index.html">Home</a>
-            <a href="./pi_ordinances.html">Pi Ordinances</a>
-            <a href="./references.html">References</a>
-        </div>
-    </header>
+    <h1 class="logo">π</h1>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <li><a href="./index.html">A Vindication on Tau</a></li>
+            <li><a href="./pi_ordinances.html">The Pi Ordinances</a></li>
+            <li><a href="./references.html">References</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="./index.html">A Vindication on Tau</a></li>
+            <li class="hideOnMobile"><a href="./pi_ordinances.html">The Pi Ordinances</a></li>
+            <li class="hideOnMobile"><a href="./references.html">References</a></li>
+            <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 
     <section id="pi-ordinances">
-        <div class="intro">
+        <div id="intro">
             <div class="intro-content">
-                <h1>THE PI ORDINANCES</h1>
+                <h1 class="title">The Pi Ordinances</h1>
                 <h2>Shaine Wei</h2>
             </div>
         </div>
