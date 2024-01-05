@@ -43,6 +43,15 @@
     border-radius: 10px;
 }
 
+/* audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+} */
+
 nav ul {
     padding: 20px 30px;
     display: flex;
@@ -55,14 +64,14 @@ nav ul {
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     color: white;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 3px;
-    z-index: 1000;
+    z-index: 100000;
     padding: 20px 30px;
 }
 
@@ -97,8 +106,6 @@ nav a {
     background-color: #ffffff16;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    /* transform: translateX(100%);
-    transition: transform 350ms ease-in; */
 }
 
 .sidebar a {
@@ -123,7 +130,6 @@ nav a {
 
 
 #project {
-    max-width: 41em;
     margin-left: auto;
     margin-right: auto;
     padding-left: 25px;
@@ -155,6 +161,12 @@ nav a {
     font-family: Proxima Nova;
     margin-top: 1em;
     text-align: center;
+}
+
+.work {
+    max-width: 41em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .work h1 {

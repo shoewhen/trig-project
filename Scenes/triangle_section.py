@@ -53,3 +53,52 @@ class original_triangle(Scene):
         self.play(Unwrite(pythag_tex), ReplacementTransform(b_equals, opp))
         self.play(Write(cosine), Write(sine))
         self.wait(2.5)
+
+class tau_over_two_plus_alpha(Scene):
+    def construct(self):
+
+        axes = Axes(x_range =[-1.25, 1.25, 0.25], y_range=[-1.25, 1.25, 0.25], x_length=7, y_length=7, axis_config={"include_tip": False, "font_size": 20})
+        circle = Circle.from_three_points(axes.c2p(-1, 0), axes.c2p(1, 0), axes.c2p(0, 1), color=WHITE)
+
+        # Triangle
+        hz = Line(ORIGIN, axes.c2p(5/13, 0)).set_color(RED)
+        vt = Line(axes.c2p(5/13, 0), axes.c2p(5/13, 12/13)).set_color(RED)
+        hyp = Line(ORIGIN, axes.c2p(5/13, 12/13)).set_color(RED)
+
+        # Lines for final triangle
+        x_line = Line(ORIGIN, axes.c2p(-5/13, 0)).set_color(BLUE)
+        y_line = Line(axes.c2p(-5/13, 0), axes.c2p(-5/13, -12/13)).set_color(BLUE)
+        
+        # Some text
+        coord1 = MathTex(r"\left(13, 0\right)", font_size = 25).move_to(axes.c2p(1.15, 0.1))
+        coord2 = MathTex(r"\left(0, 13\right)", font_size=25).move_to(axes.c2p(0.15, 1.12))
+        coord3 = MathTex(r"\left(-13, 0\right)", font_size=25).move_to(axes.c2p(-1.2, 0.1))
+        coord4 = MathTex(r"\left(0, -13\right)", font_size=25).move_to(axes.c2p(0.175, -1.12))
+        coord_group = VGroup(coord1, coord2, coord3, coord4)
+
+        alpha = MathTex(r"\alpha", font_size=30, color=RED).move_to(axes.c2p(0.125, 0.09375))
+        theta_alpha = MathTex(r"\theta=\alpha", font_size=40, color=WHITE).move_to(np.array([-5, 3, 0]))
+        theta_equals = MathTex(r"\theta=\frac{\tau}{2} + \alpha", font_size=40, color=WHITE).move_to(np.array([-5, 3, 0]))
+        final_angle = MathTex(r"\frac{\tau}{2}+\alpha", font_size = 20, color=BLUE).move_to(axes.c2p(-0.25, -0.125))
+
+        final_hz_length = MathTex(r"-5", font_size=30, color=BLUE).move_to(axes.c2p(-5/26, 0.1))
+        final_vt_length = MathTex(r"-12", font_size=30, color=BLUE).move_to(axes.c2p(-0.55, -0.4))
+
+        # Cosine and sine of theta
+        sin_final_angle = MathTex(r"\sin\left(\frac{\tau}{2}+\alpha\right)=-\frac{12}{13}", font_size = 35).move_to(np.array([-5, 1.25, 0]))
+        cos_final_angle = MathTex(r"\cos\left(\frac{\tau}{2}+\alpha\right)=-\frac{5}{13}", font_size = 35).move_to(np.array([-5, -1, 0]))
+
+        # Animations
+        self.add(axes)
+        self.play(Create(circle))
+        self.play(Write(coord_group))
+        self.play(GrowFromPoint(hz, ORIGIN), GrowFromPoint(vt, ORIGIN), GrowFromPoint(hyp, ORIGIN))
+        self.play(Write(alpha), Write(theta_alpha))
+        self.play(FadeOut(hz), FadeOut(vt))
+        self.remove(hz)
+        self.remove(vt)
+        self.play(Rotate(hyp, TAU/2, about_point=ORIGIN), ReplacementTransform(theta_alpha, theta_equals), ReplacementTransform(alpha, final_angle))
+        self.play(GrowFromPoint(x_line, ORIGIN), GrowFromPoint(y_line, axes.c2p(-5/13, -12/13)), hyp.animate.set_color(BLUE))
+        self.play(Write(final_hz_length), Write(final_vt_length), FadeOut(final_angle))
+        self.play(Write(sin_final_angle), Write(cos_final_angle))
+        self.wait()
