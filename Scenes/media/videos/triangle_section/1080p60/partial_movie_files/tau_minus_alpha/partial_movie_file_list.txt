@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/3977891868_444107428_4071203061.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_179408451_3888352542.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_1096095107_2281850797.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_2918731793_2603133991.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_1704852926_3086210820.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_3955253406_543762020.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_1937869009_2729417224.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_3083468844_3965168689.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_335420153_1547697334.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_3494338777_3674827968.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_minus_alpha/2852726489_1704852926_4240214140.mp4'

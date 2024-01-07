@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/3977891868_444107428_562546500.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_3161426490_3140894907.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_1096095107_574866700.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_4086444598_651799428.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_3263246700_5659075.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_1704852926_1014853610.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_3116585841_820929755.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_4170831534_3472109642.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_1150538674_2968897776.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_3239290202_507860674.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_1891080934_3672684246.mp4'
+file 'file:/Users/shainewei/trig-project/Scenes/media/videos/triangle_section/1080p60/partial_movie_files/tau_over_four_plus_alpha/2852726489_1704852926_1574476665.mp4'
