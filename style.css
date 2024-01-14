@@ -119,8 +119,6 @@ nav a {
     .menu-button {
         display: block;
     }
-
-    
 }
 
 
@@ -236,7 +234,6 @@ nav a {
 .centered-equations {
     display: flex;
     justify-content: space-evenly;
-    
 }
 
 .centered-equations p{
@@ -295,9 +292,8 @@ nav a {
 .resolutions {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 25px;
-    padding-right: 25px;
     max-width: 41em;
+    width: unset;
 }
 
 .sec-title {
