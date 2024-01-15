@@ -6,12 +6,10 @@
 
 .ref-body {
     background-color: #252525;
-    height: 500vh;
 }
 
 .pi-body {
     background-color: #252525;
-    height: 500vh;
 }
 
 @font-face {
@@ -370,8 +368,17 @@ nav a {
 .references p {
     color: white;
     margin: 40px 0;
+    line-height: 2;
 }
 
+.italic {
+    font-style: italic;
+}
+
+.hanging-indent {
+    padding-left: 50px;
+    text-indent: -50px;
+}
 
 
 
